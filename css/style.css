@@ -1,0 +1,87 @@
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+body {
+	background-color: ivory;
+}
+.ba-checkers-border {
+	position: 	relative;
+	width: 80%;
+	max-width: 70vh;
+	background-color: black;
+	margin: 20px auto;
+}
+.ba-checkers	{
+	position: absolute;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:2%;
+	padding: 1px;
+	background-color: grey;
+}
+.ba-checkers-border:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+ .ba-row {
+ 	height: 12.5%;
+ 	width: 100%;
+ }
+.ba-cell {
+	position: relative;
+	width: 12.5%;
+	height: 100%;
+	background-color: #FFF;
+}
+.ba-row .ba-cell {
+	float: left;
+}
+
+.ba-row:nth-child(even) .ba-cell:nth-child(odd),
+.ba-row:nth-child(odd) .ba-cell:nth-child(even) {
+	background-color: grey;
+}
+.ba-row:nth-child(1) .ba-cell:nth-child(even):before,
+.ba-row:nth-child(3) .ba-cell:nth-child(even):before,
+.ba-row:nth-child(2) .ba-cell:nth-child(odd):before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: darkgreen;
+}
+.ba-row:nth-child(6) .ba-cell:nth-child(odd):before,
+.ba-row:nth-child(8) .ba-cell:nth-child(odd):before,
+.ba-row:nth-child(7) .ba-cell:nth-child(even):before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: darkblue;
+}
+.ba-row:nth-child(1) .ba-cell:nth-child(even):hover:before,
+.ba-row:nth-child(3) .ba-cell:nth-child(even):hover:before,
+.ba-row:nth-child(2) .ba-cell:nth-child(odd):hover:before {
+	top:0;
+}
+.ba-row:nth-child(6) .ba-cell:nth-child(odd):hover:before,
+.ba-row:nth-child(8) .ba-cell:nth-child(odd):hover:before,
+.ba-row:nth-child(7) .ba-cell:nth-child(even):hover:before {
+	top:0;
+}
